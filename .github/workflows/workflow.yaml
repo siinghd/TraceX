@@ -19,7 +19,7 @@ jobs:
           curl -L https://unpkg.com/@pnpm/self-installer | node
 
       - name: Install dependencies
-        run: pnpm ci
+        run: pnpm install
 
       - name: Run lint checks
         run: pnpm run lint
