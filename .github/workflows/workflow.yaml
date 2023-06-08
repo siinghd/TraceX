@@ -47,7 +47,10 @@ jobs:
           docker build -t tracex/time:${{ steps.datetime.outputs.date }} .
           docker tag tracex/time:${{ steps.datetime.outputs.date }} ${{ secrets.DOCKER_USERNAME }}/tracex:${{ steps.datetime.outputs.date }}
           docker push ${{ secrets.DOCKER_USERNAME }}/tracex:${{ steps.datetime.outputs.date }}
-
+      
+      - name: Grant Docker permissions
+        run: sudo chmod 666 /var/run/docker.sock
+      
       - name: SSH into the server and execute command
         uses: appleboy/ssh-action@master
         with:
