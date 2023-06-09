@@ -3,25 +3,58 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --white: #EAEAF3;
+  --black: #3D4048;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.regular {
+  font-family: degular, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.italic {
+  font-family: degular, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.medium {
+  font-family: degular, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.semibold {
+  font-family: degular, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.bold {
+  font-family: degular, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.bold-italic {
+  font-family: degular, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.black {
+  font-family: degular, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+body.dark {
+  background: var(--black);
+  color: var(--white);
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
 }
