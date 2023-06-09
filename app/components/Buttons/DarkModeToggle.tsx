@@ -17,18 +17,16 @@ export default function DarkModeToggle({ darkMode, setDarkMode }: DarkModeToggle
     setEnabled(darkMode);
   }, [darkMode]);
 
-  useEffect(() => {
-    if (enabled) {
-      setDarkMode(true);
-    } else {
-      setDarkMode(false);
-    }
-  }, [enabled]);
+  const handleToggle = () => {
+    const newEnabled = !enabled;
+    setEnabled(newEnabled);
+    setDarkMode(newEnabled);
+  };
 
   return (
     <Switch
       checked={enabled}
-      onChange={setEnabled}
+      onChange={handleToggle}
       className={classNames(
         enabled ? 'bg-white' : 'bg-grey',
         'relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-grad-light-1 dark:focus:ring-grad-light-2 focus:ring-offset-2 dark:ring-offset-black ring-offset-white'
@@ -47,7 +45,7 @@ export default function DarkModeToggle({ darkMode, setDarkMode }: DarkModeToggle
           )}
           aria-hidden="true"
         >
-            <i className="bi bi-sun translate-y-[1px]"></i>
+          <i className="bi bi-sun translate-y-[1px]"></i>
         </span>
         <span
           className={classNames(

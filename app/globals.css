@@ -58,3 +58,18 @@ body.dark {
   justify-content: center;
   align-items: center;
 }
+
+.hero-text-container {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+
+  filter: url(#threshold) blur(0.6px);
+}
+
+#hero-text1,
+#hero-text2 {
+  position: absolute;
+  display: inline-block;
+}
