@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --white: #EAEAF3;
+  --black: #3D4048;
+}
+
 .regular {
   font-family: degular, sans-serif;
   font-weight: 400;
@@ -42,4 +47,14 @@
   font-family: degular, sans-serif;
   font-weight: 800;
   font-style: normal;
+}
+
+body.dark {
+  background: var(--black);
+  color: var(--white);
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
 }
