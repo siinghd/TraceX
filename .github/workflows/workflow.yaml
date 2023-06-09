@@ -74,5 +74,7 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
+            docker stop tracex
+            docker rm tracex
             docker pull ${{ secrets.DOCKER_USERNAME }}/tracex:${{ steps.datetime.outputs.date }}
             docker run -d --name tracex -p 3501:3000 ${{ secrets.DOCKER_USERNAME }}/tracex:${{ steps.datetime.outputs.date }}
