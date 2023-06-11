@@ -76,7 +76,7 @@ const Hero = (): JSX.Element => {
 
       const newTime: number = Date.now();
       const shouldIncrementIndex = cooldown > 0;
-      const dt = (newTime - time) / 1000;
+      const dt = (newTime - time) / 3000;
       time = newTime;
 
       cooldown -= dt;
@@ -97,25 +97,30 @@ const Hero = (): JSX.Element => {
 
   return (
     <>
-      <div id="hero-text-container" ref={containerRef}>
-        <span className='bold text-[150px] select-none' id="hero-text1" ref={text1Ref}></span>
-        <span className='bold text-[150px] select-none' id="hero-text2" ref={text2Ref}></span>
-      </div>
+        <div id="hero-text-container" className='min-h-[55px] lg:min-h-[100px] xl:min-h-[130px] mb-12' ref={containerRef}>
+            <span className='bold text-[65px] lg:text-[120px] xl:text-[150px] leading-[55px] lg:leading-[100px] xl:leading-[130px] select-none' id="hero-text1" ref={text1Ref}>Record</span>
+            <span className='bold text-[65px] lg:text-[120px] xl:text-[150px] leading-[55px] lg:leading-[100px] xl:leading-[130px] select-none' id="hero-text2" ref={text2Ref}>Record</span>
+        </div>
 
-      <svg id="filters" ref={filtersRef}>
-        <defs>
-          <filter id="threshold">
-            <feColorMatrix
-              in="SourceGraphic"
-              type="matrix"
-              values="1 0 0 0 0
-                0 1 0 0 0
-                0 0 1 0 0
-                0 0 0 255 -140"
-            />
-          </filter>
-        </defs>
-      </svg>
+        <svg id="filters" ref={filtersRef} className='hidden'>
+            <defs>
+            <filter id="threshold">
+                <feColorMatrix
+                in="SourceGraphic"
+                type="matrix"
+                values="1 0 0 0 0
+                    0 1 0 0 0
+                    0 0 1 0 0
+                    0 0 0 255 -140"
+                />
+            </filter>
+            </defs>
+        </svg>
+
+
+        <p aria-label="The best tool to trace" className='semibold text-[30px] select-none'>
+           The best tool to <span className="typewriter thick text-gradient"></span>
+        </p>
     </>
   );
 };
