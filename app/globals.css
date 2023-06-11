@@ -239,3 +239,30 @@ body.dark {
 .carousel-wrapper .slick-dots.slick-thumb li.slick-active {
   opacity: 1;
 }
+
+.circles {
+  animation: circles 10s infinite ease;
+}
+
+@keyframes circles {
+  0% {
+    filter: blur(240px);
+    opacity: .6;
+  }
+  25% {
+    filter: blur(180px);
+    opacity: .8;
+  }
+  50% {
+    filter: blur(220px);
+    opacity: .3;
+  }
+  75%{
+    filter: blur(260px);
+    opacity: .4;
+  }
+  100% {
+    filter: blur(240px);
+    opacity: .6;
+  }
+}

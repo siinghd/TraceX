@@ -37,13 +37,13 @@ const Header = (): JSX.Element => {
       <div className="md:w-1/3">
         <Image src={logoSrc} width={200} height={100} className="max-w-[100px] select-none" alt="TraceX" />
       </div>
-      <div className="md:w-1/3 text-center flex center">
+      <div className="flex text-center md:w-1/3 center">
         <DarkModeToggle darkMode={darkMode} setDarkMode={handleDarkModeToggle} />
       </div>
-      <div className="md:w-1/3 flex justify-end">
-        <Link href="#trace" className="bold text-[20px] md:text-[30px] border-l-[1px] border-grey py-2 pl-3 md:pl-6 lg:pl-8 select-none leading-8">
+      <div className="flex justify-end md:w-1/3">
+        <a href="#trace" className="bold text-[20px] md:text-[30px] border-l-[1px] border-grey py-2 pl-3 md:pl-6 lg:pl-8 select-none leading-8">
           Trace something
-        </Link>
+        </a>
       </div>
     </header>
   );
