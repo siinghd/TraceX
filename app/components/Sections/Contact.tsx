@@ -11,7 +11,7 @@ export default function Contact() {
           <div className="lg:max-w-[600px]">
             <h2 className="font-bold leading-none text-[48px]">Subscribe to our mailing list</h2>
             <p className="mt-4 text-[18px]">
-            Be the first to receive exclusive updates, industry insights, and special offers. Join our mailing list today to stay connected and stay ahead of the curve. Don't miss out on the latest news and advancements in text recording. Simply enter your email address below and be part of our community.
+            Be the first to receive exclusive updates, industry insights, and special offers. Join our mailing list today to stay connected and stay ahead of the curve. Don&apos;t miss out on the latest news and advancements in text recording. Simply enter your email address below and be part of our community.
             </p>
             <div className="flex mt-6 gap-x-4">
               <label htmlFor="email-address" className="sr-only">

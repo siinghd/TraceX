@@ -72,7 +72,7 @@ export default function Home() {
       <div id="trace" className="px-3 md:px-6 lg:px-8 w-full flex center border-b-[1px] border-grey py-8 lg:py-12 text-center relative overflow-hidden">
         <div className="max-w-[1000px] flex flex-col center">
           <h3 className="bold text-[48px] leading-none mb-4">Capture your words. Preserve your legacy.</h3>
-          <p className="regular text-[18px] max-w-[600px] mb-8">Don't let your ideas fade away. Record your text on the blockchain today and ensure your voice echoes through time.</p>
+          <p className="regular text-[18px] max-w-[600px] mb-8">Don&apos;t let your ideas fade away. Record your text on the blockchain today and ensure your voice echoes through time.</p>
           <TextAreaTrace />
         </div>
         <div className="circles w-[420px] aspect-square rounded-full bg-grad-light-2 absolute top-[-20%] left-[5%] opacity-60 blur-[240px] z-[-1]" />
