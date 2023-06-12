@@ -1,4 +1,5 @@
 import Button from "./components/Buttons/Button";
+import ButtonBubble from "./components/Buttons/ButtonBubble";
 import Carousel from "./components/Carousels/Carousel";
 import CircularText from "./components/CircularText";
 import TextAreaTrace from "./components/Inputs/TextAreaTrace";
@@ -38,11 +39,13 @@ export default function Home() {
           <div className="text-center max-w-[400px]">
             <h3 className="bold text-[30px] mb-2">Record. Protect. Empower.</h3>
             <p className="text-[18px] mb-6">Harness the potential of blockchain technology. Record your text. Protect your rights. Empower your business. Start now and make your mark.</p>
-            <Button 
-              text="Trace something"
+            <div>
+            <ButtonBubble 
+             /*  text="Trace something"
               type="link"
-              href="#trace"
+              href="#trace" */
             />
+            </div>
           </div>
         </div>
         <div className="border-b-[1px] border-grey px-3 md:px-6 lg:px-8 py-8">
